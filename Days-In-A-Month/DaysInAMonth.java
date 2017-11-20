@@ -4,20 +4,17 @@ public class DaysInAMonth {
 
 	public static void main(String[] args) {
 		System.out.println("Days in a month:\n");
-		String month = "Febuary"; // Declared month as String
+		String month = "Febuary";	// Declared month as String
 		int year = 2005;
 		isLeapYear(year);
 
-		DaysInMonth(year, month); // Calls DaysInMonth sub method and inherits
-									// Year and Month from the Main method.
+		DaysInMonth(year, month); 	// Calls DaysInMonth sub method and inherits
+						// Year and Month from the Main method.
 	}
 
-	private static void DaysInMonth(int a, String b) // Sub Method, inherits A
-														// and B from main
-														// method.
+	private static void DaysInMonth(int a, String b) // Sub Method, inherits A and B from main method.
 	{
-		int days; // Depending on String Value B (Month), the switch case below
-					// displays the number of days.
+		int days; // Depending on String Value B (Month), the switch case below displays the number of days.
 		switch (b) {
 		case "January":
 		case "March":
@@ -58,25 +55,18 @@ public class DaysInAMonth {
 			days = -1;
 			break;
 		}
-		System.out.println("There are " + days + " in " + b); // Outputs the
-																// Month and
-																// days based on
-																// the switch
-																// statement
-																// above.
+		System.out.println("There are " + days + " in " + b); 	// Outputs the Month and days based on the switch statement above.
 
 	}
 
-	private static void isLeapYear(int a) { // Sub Method called within Main
-		// with inherited year integer.
-		if (a % 4 == 0) // Leap years take place every 4 years.
+	private static void isLeapYear(int a) { // Sub Method called within Main with inherited year integer.
+		if (a % 4 == 0) 		// Leap years take place every 4 years.
 		{
-			if (a % 100 == 0) // If the year mod 4 is 0, the code then checks
-			// the year based on century.
+			if (a % 100 == 0) // If the year mod 4 is 0, the code then checks the year based on century.
 			{
-				if (a % 400 == 0) // If positive, the code finally check if the
-				// year is the same every 400 years. if this
-				// is true. The year is a leap yer.
+				if (a % 400 == 0) 	// If positive, the code finally check if the
+							// year is the same every 400 years. if this
+							// is true. The year is a leap yer.
 				{
 					System.out.println(a + " is a leap year");
 				} else {
